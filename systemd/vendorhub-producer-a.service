@@ -1,0 +1,12 @@
+[Unit]
+Description=VendorHub Producer A (API -> staging + RMQ)
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/vendor-sync/app
+EnvironmentFile=/opt/vendor-sync/.env
+ExecStart=/opt/vendor-sync/app/venv/bin/python -m vendorhub.cli.run_producer_a
+User=root
+Group=root

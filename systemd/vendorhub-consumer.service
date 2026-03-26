@@ -1,0 +1,9 @@
+[Service]
+Type=simple
+WorkingDirectory=/opt/vendor-sync/app
+EnvironmentFile=/opt/vendor-sync/.env
+ExecStart=/opt/vendor-sync/app/venv/bin/python -m vendorhub.cli.run_consumer
+Restart=always
+RestartSec=5
+User=root
+Group=root

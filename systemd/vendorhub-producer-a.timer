@@ -1,0 +1,11 @@
+[Unit]
+Description=Run VendorHub Producer A every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Persistent=true
+Unit=vendorhub-producer-a.service
+
+[Install]
+WantedBy=timers.target
