@@ -1,12 +1,10 @@
 # VendorHub Data Pipeline
 
-Production-like data pipeline for ingesting, processing, and normalizing product data from multiple vendors using PostgreSQL, RabbitMQ, pandas, and SQLAlchemy.
+Production data pipeline for ingesting, processing, and normalizing product data from multiple vendors using PostgreSQL, RabbitMQ, pandas, and SQLAlchemy.
 
 ---
 
 ## Overview
-
-This project simulates a real-world e-commerce data integration pipeline similar to DK Hardware.
 
 The system is fully deployed on a VPS server and runs continuously via systemd services.
 
@@ -100,9 +98,6 @@ select * from core.products limit 10;
 
 select * from core.product_price_history order by changed_at desc;
 
----
-
-## Improvements
 
 - Add ClickHouse
 - Retry from DLQ
